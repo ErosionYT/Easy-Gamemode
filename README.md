@@ -1,5 +1,7 @@
 # Easy-Gamemode
-A easy pmmp command to add easy change between gamemodes.
+![](logo.png)
+
+An easy pmmp command to add easy change between gamemodes.
 
 ## Permissions
 | Command  | Permission | Default |
