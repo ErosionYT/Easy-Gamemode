@@ -5,4 +5,5 @@ branches:
 projects:
   Easy-Gamemode:
     path: ""
+    icon: "logo.png"
 ...
