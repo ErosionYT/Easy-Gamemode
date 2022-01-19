@@ -1,4 +1,18 @@
 name: EasyGamemode
+description: Easy to use plugin that changes your gamemode
 main: ErosionYT\EasyGM\Main
 author: ErosionYT
-version: 1.1
+version: 2.0.0
+api: 4.0.0
+
+permissions:
+  gmc.command:
+    default: op
+    description: Change your gamemode to creative
+  gms.command:
+    default: op
+    description: Change your gamemode to survival
+  gmspc.command:
+    default: op
+    description: Change your gamemode to spectator
+
