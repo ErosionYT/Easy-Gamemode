@@ -1,0 +1,8 @@
+--- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/ErosionYT/Easy-Gamemode
+build-by-default: true
+branches:
+- main
+projects:
+  Easy-Gamemode:
+    path: ""
+...
