@@ -13,9 +13,7 @@ use pocketmine\command\PluginCommand;
 use pocketmine\plugin\Plugin;
 
 class GmsCommand extends Command{
-
-    private $plugin;
-
+	
 	public function __construct(string $name) {
         parent::__construct($name);
         $this->setPermission("gms.command");
