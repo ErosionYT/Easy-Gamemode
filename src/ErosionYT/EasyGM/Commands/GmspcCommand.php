@@ -14,8 +14,6 @@ use pocketmine\plugin\Plugin;
 
 class GmspcCommand extends Command{
 
-    private $plugin;
-
     public function __construct(string $name) {
         parent::__construct($name);
         $this->setPermission("gmspc.command");
