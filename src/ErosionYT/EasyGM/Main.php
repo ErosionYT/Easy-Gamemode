@@ -3,10 +3,10 @@
 namespace ErosionYT\EasyGM;
 
 # Commands
-
 use ErosionYT\EasyGM\Commands\GmcCommand;
 use ErosionYT\EasyGM\Commands\GmsCommand;
 use ErosionYT\EasyGM\Commands\GmspcCommand;
+use ErosionYT\EasyGM\Commands\AdventureCommand;
 
 # Pocketmine
 use pocketmine\command\Command;
@@ -19,21 +19,17 @@ use pocketmine\Server;
 use pocketmine\Player;
 
 class Main extends PluginBase{
-    
-	const MAIN_PREFIX = "EasyGM";
-	
-    
-	
+
 	public function onEnable(): void
 	    {
-            
 		# Command Unregister
 		$this->getServer()->getCommandMap()->unregister($this->getServer()->getCommandMap()->getCommand("defaultgamemode"));
 		$this->getServer()->getCommandMap()->unregister($this->getServer()->getCommandMap()->getCommand("gamemode"));
 		
-		# Commands
-		$this->getServer()->getCommandMap()->register("gmc", new GmcCommand("gmc", $this));
-		$this->getServer()->getCommandMap()->register("gms", new GmsCommand("gms", $this));
-		$this->getServer()->getCommandMap()->register("gmspc", new GmspcCommand("gmspc", $this));
+		# Commands register
+		$this->getServer()->getCommandMap()->register("gmc", new GmcCommand($this));
+		$this->getServer()->getCommandMap()->register("gms", new GmsCommand($this));
+		$this->getServer()->getCommandMap()->register("gmspc", new GmspcCommand($this));
+        $this->getServer()->getCommandMap()->register("gma", new AdventureCommand($this));
 	    }
-	 }
+}

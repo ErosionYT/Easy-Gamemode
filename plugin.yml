@@ -1,8 +1,9 @@
 name: EasyGamemode
 description: Easy to use plugin that changes your gamemode
+website: https://www.github.com/ErosionYT
 main: ErosionYT\EasyGM\Main
 author: ErosionYT
-version: 2.0.1
+version: 2.0.0
 api: 4.0.0
 
 permissions:
@@ -15,4 +16,7 @@ permissions:
   gmspc.command:
     default: op
     description: Change your gamemode to spectator
+  gma.command:
+    default: op
+    description: Change your gamemode to Adventure
 

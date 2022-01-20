@@ -2,17 +2,13 @@
 
 namespace ErosionYT\EasyGM\Commands;
 
-use ErosionYT\EasyGM\Main;
-
 use pocketmine\player\Player;
 use pocketmine\player\GameMode;
-use pocketmine\Server;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
-use pocketmine\command\PluginCommand;
-use pocketmine\plugin\Plugin;
 
 class GmspcCommand extends Command{
+
 
     public function __construct(string $name) {
         parent::__construct($name);
