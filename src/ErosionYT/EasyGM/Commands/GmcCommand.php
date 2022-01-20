@@ -13,6 +13,8 @@ use pocketmine\command\PluginCommand;
 use pocketmine\plugin\Plugin;
 
 class GmcCommand extends Command{
+	
+	private $plugin;
 
 	public function __construct(string $name) {
         parent::__construct($name);
@@ -30,6 +32,7 @@ class GmcCommand extends Command{
             $sender->sendMessage("§cYou do not have permission to use this command");
             return false;
         }
+	    
 		$sender->setGamemode(GameMode::CREATIVE());
 		$sender->sendMessage("§6» §7You have changed your gamemode to Creative");
 		return true;
