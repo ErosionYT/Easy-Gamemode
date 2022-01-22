@@ -9,14 +9,16 @@ use pocketmine\command\CommandSender;
 
 class GmcCommand extends Command{
 
-	public function __construct(string $name) {
+	public function __construct(string $name)
+    {
         parent::__construct($name);
         $this->setPermission("gmc.command");
         $this->setDescription("Change your gamemode to creative");
         $this->setAliases(['creative', '1', 'c']);
         $this->setUsage("/gmc");
     }
-    public function execute(CommandSender $sender, string $commandLabel, array $args): bool{
+    public function execute(CommandSender $sender, string $commandLabel, array $args): bool
+    {
         if (!$sender instanceof Player) {
             $sender->sendMessage("Use the command in-game");
             return false;
