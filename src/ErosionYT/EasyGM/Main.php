@@ -31,6 +31,6 @@ class Main extends PluginBase
 		$this->getServer()->getCommandMap()->register("gmc", new GmcCommand($this));
 		$this->getServer()->getCommandMap()->register("gms", new GmsCommand($this));
 		$this->getServer()->getCommandMap()->register("gmspc", new GmspcCommand($this));
-        $this->getServer()->getCommandMap()->register("gma", new GmaCommand($this));
+                $this->getServer()->getCommandMap()->register("gma", new GmaCommand($this));
 	    }
 }
