@@ -1,4 +1,4 @@
-# Easy-Gamemode
+# Easy-Gamemode [![](https://poggit.pmmp.io/shield.state/EasyGamemode)](https://poggit.pmmp.io/p/EasyGamemode) [![Discord](https://img.shields.io/discord/330850307607363585?logo=discord)](https://discord.gg/EawuF4BPU7)
 ![](logo.png)
 
 An easy pmmp command to add easy change between gamemodes.
