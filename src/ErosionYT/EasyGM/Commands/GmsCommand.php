@@ -2,12 +2,15 @@
 
 namespace ErosionYT\EasyGM\Commands;
 
+use ErosionYT\EasyGM\Main;
 use pocketmine\player\Player;
 use pocketmine\player\GameMode;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
+use pocketmine\plugin\Plugin;
+use pocketmine\plugin\PluginOwned;
 
-class GmsCommand extends Command
+class GmsCommand extends Command implements PluginOwned
 {
 
 	public function __construct(string $name)
@@ -32,5 +35,10 @@ class GmsCommand extends Command
         $sender->setGamemode(GameMode::SURVIVAL());
         $sender->sendMessage("§6» §7You have changed your gamemode to Survival");
         return true;
+    }
+
+    public function getOwningPlugin(): Plugin
+    {
+        return Main::getInstance();
     }
 }

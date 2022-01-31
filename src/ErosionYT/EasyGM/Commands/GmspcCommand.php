@@ -2,12 +2,15 @@
 
 namespace ErosionYT\EasyGM\Commands;
 
+use ErosionYT\EasyGM\Main;
 use pocketmine\player\Player;
 use pocketmine\player\GameMode;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
+use pocketmine\plugin\Plugin;
+use pocketmine\plugin\PluginOwned;
 
-class GmspcCommand extends Command{
+class GmspcCommand extends Command implements PluginOwned {
 
 
     public function __construct(string $name)
@@ -32,5 +35,10 @@ class GmspcCommand extends Command{
         $sender->setGamemode(GameMode::SPECTATOR());
         $sender->sendMessage("§6» §7You have changed your gamemode to Spectator");
         return true;
+    }
+
+    public function getOwningPlugin(): Plugin
+    {
+        return Main::getInstance();
     }
 }
