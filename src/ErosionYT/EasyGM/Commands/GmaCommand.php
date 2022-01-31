@@ -6,13 +6,14 @@ use ErosionYT\EasyGM\Main;
 
 use pocketmine\player\Player;
 use pocketmine\player\GameMode;
+use pocketmine\plugin\PluginOwned;
 use pocketmine\Server;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\command\PluginCommand;
 use pocketmine\plugin\Plugin;
 
-class GmaCommand extends Command{
+class GmaCommand extends Command implements PluginOwned {
 
     public function __construct(string $name)
     {
@@ -35,5 +36,10 @@ class GmaCommand extends Command{
         $sender->setGamemode(GameMode::ADVENTURE());
         $sender->sendMessage("§6» §7You have changed your gamemode to Adventure");
         return true;
+    }
+
+    public function getOwningPlugin(): Plugin
+    {
+        return Main::getInstance();
     }
 }
