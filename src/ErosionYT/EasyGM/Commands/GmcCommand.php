@@ -15,7 +15,7 @@ class GmcCommand extends Command implements PluginOwned {
 	public function __construct(string $name)
     {
         parent::__construct($name);
-        $this->setPermission("gmc.command");
+        $this->setPermission("easygamemode.command.gmc");
         $this->setDescription("Change your gamemode to creative");
         $this->setAliases(['creative', '1', 'c']);
         $this->setUsage("/gmc");
