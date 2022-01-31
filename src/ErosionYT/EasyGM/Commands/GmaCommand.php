@@ -18,7 +18,7 @@ class GmaCommand extends Command implements PluginOwned {
     public function __construct(string $name)
     {
         parent::__construct($name);
-        $this->setPermission("gma.command");
+        $this->setPermission("easygamemode.command.gma");
         $this->setDescription("Change your gamemode to adventure");
         $this->setAliases(['2', 'a', 'adventure']);
         $this->setUsage("/gma");
