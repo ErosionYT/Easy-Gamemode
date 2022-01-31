@@ -10,13 +10,13 @@ permissions:
   easygamemode.command.gmc:
     default: op
     description: Change your gamemode to creative
-   easygamemode.command.gms:
+  easygamemode.command.gms:
     default: op
     description: Change your gamemode to survival
-   easygamemode.command.gmspc:
+  easygamemode.command.gmspc:
     default: op
     description: Change your gamemode to spectator
-   easygamemode.command.gma:
+  easygamemode.command.gma:
     default: op
     description: Change your gamemode to Adventure
 
