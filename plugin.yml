@@ -7,16 +7,16 @@ version: 2.0.0
 api: 4.0.0
 
 permissions:
-  gmc.command:
+  easygamemode.command.gmc:
     default: op
     description: Change your gamemode to creative
-  gms.command:
+   easygamemode.command.gms:
     default: op
     description: Change your gamemode to survival
-  gmspc.command:
+   easygamemode.command.gmspc:
     default: op
     description: Change your gamemode to spectator
-  gma.command:
+   easygamemode.command.gma:
     default: op
     description: Change your gamemode to Adventure
 
