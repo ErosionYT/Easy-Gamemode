@@ -8,29 +8,31 @@ use ErosionYT\EasyGM\Commands\GmsCommand;
 use ErosionYT\EasyGM\Commands\GmspcCommand;
 use ErosionYT\EasyGM\Commands\GmaCommand;
 
-# Pocketmine
-use pocketmine\command\Command;
-use pocketmine\event\Listener;
+# PocketMine
 use pocketmine\plugin\PluginBase;
-use pocketmine\tile\Tile;
-use pocketmine\utils\Config;
-use pocketmine\utils\TextFormat;
-use pocketmine\Server;
-use pocketmine\Player;
 
 class Main extends PluginBase
 {
+    private static self $instance;
 
 	public function onEnable(): void
-	    {
+    {
+        # Instance register
+        self::$instance = $this;
+
 		# Command Unregister
 		$this->getServer()->getCommandMap()->unregister($this->getServer()->getCommandMap()->getCommand("defaultgamemode"));
 		$this->getServer()->getCommandMap()->unregister($this->getServer()->getCommandMap()->getCommand("gamemode"));
 		
 		# Commands register
-		$this->getServer()->getCommandMap()->register("gmc", new GmcCommand($this));
-		$this->getServer()->getCommandMap()->register("gms", new GmsCommand($this));
-		$this->getServer()->getCommandMap()->register("gmspc", new GmspcCommand($this));
-                $this->getServer()->getCommandMap()->register("gma", new GmaCommand($this));
-	    }
+		$this->getServer()->getCommandMap()->register("gmc", new GmcCommand('gmc'));
+		$this->getServer()->getCommandMap()->register("gms", new GmsCommand('gms'));
+		$this->getServer()->getCommandMap()->register("gmspc", new GmspcCommand('gmspc'));
+        $this->getServer()->getCommandMap()->register("gma", new GmaCommand('gma'));
+    }
+
+    public static function getInstance () : self
+    {
+        return self::$instance;
+    }
 }
