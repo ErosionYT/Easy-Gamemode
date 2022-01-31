@@ -16,7 +16,7 @@ class GmsCommand extends Command implements PluginOwned
 	public function __construct(string $name)
     {
         parent::__construct($name);
-        $this->setPermission("gms.command");
+        $this->setPermission("easygamemode.command.gms");
         $this->setDescription("Change your gamemode to survival");
         $this->setAliases(['survival', '0', 's']);
         $this->setUsage("/gms");
