@@ -1,7 +1,7 @@
 # Easy-Gamemode [![Discord](https://img.shields.io/discord/330850307607363585?logo=discord)](https://discord.gg/EawuF4BPU7)
 ![](logo.png)
 
-An easy pmmp command to add easy change between gamemodes.
+A plugin that allows users to change their gamemode.
 
 ## Permissions
 | Command  | Permission | Default |
