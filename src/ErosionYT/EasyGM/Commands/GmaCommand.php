@@ -7,10 +7,8 @@ use ErosionYT\EasyGM\Main;
 use pocketmine\player\Player;
 use pocketmine\player\GameMode;
 use pocketmine\plugin\PluginOwned;
-use pocketmine\Server;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
-use pocketmine\command\PluginCommand;
 use pocketmine\plugin\Plugin;
 
 class GmaCommand extends Command implements PluginOwned {

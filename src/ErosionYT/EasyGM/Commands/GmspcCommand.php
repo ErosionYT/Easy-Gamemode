@@ -18,7 +18,7 @@ class GmspcCommand extends Command implements PluginOwned {
         parent::__construct($name);
         $this->setPermission("easygamemode.command.gmspc");
         $this->setDescription("Change your gamemode to Spectator");
-        $this->setAliases(['Spectator', '3', 'spec']);
+        $this->setAliases(['spectator', '3', 'spec']);
         $this->setUsage("/gmspc");
     }
     public function execute(CommandSender $sender, string $commandLabel, array $args): bool

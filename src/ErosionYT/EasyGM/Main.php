@@ -7,6 +7,7 @@ use ErosionYT\EasyGM\Commands\GmcCommand;
 use ErosionYT\EasyGM\Commands\GmsCommand;
 use ErosionYT\EasyGM\Commands\GmspcCommand;
 use ErosionYT\EasyGM\Commands\GmaCommand;
+use ErosionYT\EasyGM\Commands\GmuiCommand;
 
 # PocketMine
 use pocketmine\plugin\PluginBase;
@@ -29,6 +30,7 @@ class Main extends PluginBase
 		$this->getServer()->getCommandMap()->register("gms", new GmsCommand('gms'));
 		$this->getServer()->getCommandMap()->register("gmspc", new GmspcCommand('gmspc'));
         $this->getServer()->getCommandMap()->register("gma", new GmaCommand('gma'));
+        $this->getServer()->getCommandMap()->register("gmui", new GmuiCommand('gmui'));
     }
 
     public static function getInstance () : self
